@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import { boardDefault } from '../Words';
 import Letter from './Letter';
 
 const Board = () => {
