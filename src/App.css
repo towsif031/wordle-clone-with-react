@@ -98,3 +98,7 @@ nav h1 {
 	font-family: Arial, Helvetica, sans-serif;
 	cursor: pointer;
 }
+
+#big {
+	width: 100px;
+}
