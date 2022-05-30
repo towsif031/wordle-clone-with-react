@@ -13,6 +13,8 @@ const App = () => {
 		letterPos: 0
 	});
 
+	const correctWord = 'RIGHT';
+
 	const onSelectLetter = (keyVal) => {
 		if (currAttempt.letterPos > 4) return;
 
@@ -55,7 +57,8 @@ const App = () => {
 					setCurrAttempt,
 					onSelectLetter,
 					onEnter,
-					onDelete
+					onDelete,
+					correctWord
 				}}
 			>
 				<div className="game">
