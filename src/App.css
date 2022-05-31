@@ -91,6 +91,7 @@ nav h1 {
 	justify-content: center;
 	margin: 5px;
 }
+
 .line2 {
 	flex: 33%;
 	display: flex;
@@ -98,6 +99,7 @@ nav h1 {
 	justify-content: center;
 	margin: 5px;
 }
+
 .line3 {
 	flex: 33%;
 	display: flex;
@@ -122,4 +124,8 @@ nav h1 {
 
 #big {
 	width: 100px;
+}
+
+#disabled {
+	background-color: #3a393c;
 }
