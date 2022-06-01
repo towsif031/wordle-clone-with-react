@@ -1,6 +1,7 @@
 import { useState, createContext, useEffect } from 'react';
 import './App.css';
 import Board from './components/Board';
+import GameOver from './components/GameOver';
 import Keyboard from './components/Keyboard';
 import { boardDefault, generateWordSet } from './Words';
 
@@ -14,6 +15,10 @@ const App = () => {
 	});
 	const [wordSet, setWordSet] = useState(new Set());
 	const [disabledLetters, setDisabledLetters] = useState([]);
+	const [gameOver, setGameOver] = useState({
+		gameOver: false,
+		guessedWord: false
+	});
 
 	const correctWord = 'RIGHT';
 
@@ -82,12 +87,14 @@ const App = () => {
 					onDelete,
 					correctWord,
 					disabledLetters,
-					setDisabledLetters
+					setDisabledLetters,
+					gameOver,
+					setGameOver
 				}}
 			>
 				<div className="game">
 					<Board />
-					<Keyboard />
+					{gameOver.gameOver ? <GameOver /> : <Keyboard />}
 				</div>
 			</AppContext.Provider>
 		</div>
