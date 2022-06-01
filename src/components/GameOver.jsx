@@ -10,11 +10,11 @@ const GameOver = () => {
 				<h3>
 					{gameOver.guessedWord
 						? 'You guessed the word.'
-						: 'You failed'}
+						: 'You failed!'}
 				</h3>
 				<h1>The Word is: {correctWord}</h1>
 				{gameOver.guessedWord && (
-					<h3>You guessed in {currAttempt.attempt} attempts.</h3>
+					<h3>You guessed it in {currAttempt.attempt} attempts.</h3>
 				)}
 			</div>
 		</>

@@ -55,7 +55,12 @@ const App = () => {
 		}
 
 		if (currWord === correctWord) {
-			alert('You Win!');
+			setGameOver({ gameOver: true, guessedWord: true });
+			return;
+		}
+
+		if (currAttempt.attempt === 5) {
+			setGameOver({ gameOver: true, guessedWord: false });
 		}
 	};
 
