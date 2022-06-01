@@ -51,7 +51,7 @@ const App = () => {
 		if (wordSet.has(currWord.toLowerCase())) {
 			setCurrAttempt({ attempt: currAttempt.attempt + 1, letterPos: 0 });
 		} else {
-			alert('Word Not Found.');
+			alert('Word not found');
 		}
 
 		if (currWord === correctWord) {
@@ -61,6 +61,7 @@ const App = () => {
 
 		if (currAttempt.attempt === 5) {
 			setGameOver({ gameOver: true, guessedWord: false });
+			return;
 		}
 	};
 
